@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="sign_up_form_container" stylesheets="@../../../styles/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.projekt_srgrgic.controllers.OrganizatorSignUpController">
+   <children>
+      <Text layoutX="255.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novi račun">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font></Text>
+      <TextField fx:id="usernameTextField" layoutX="119.0" layoutY="79.0" />
+      <Label layoutX="25.0" layoutY="83.0" text="Korisničko ime:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="131.0" prefHeight="18.0" prefWidth="96.0" text="Ime:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <TextField fx:id="nameTextField" layoutX="119.0" layoutY="127.0" />
+      <TextField fx:id="addressTextField" layoutX="119.0" layoutY="174.0" />
+      <TextField fx:id="eMailTextField" layoutX="119.0" layoutY="222.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="418.0" layoutY="222.0" />
+      <Button layoutX="481.0" layoutY="347.0" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="26.0" prefWidth="82.0" styleClass="next_btn" text="Kreiraj" />
+      <Button layoutX="354.0" layoutY="345.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="81.0" styleClass="cancel_btn" text="Odustani" />
+      <PasswordField fx:id="passwordField" layoutX="119.0" layoutY="266.0" />
+      <PasswordField fx:id="repeatedPasswordField" layoutX="119.0" layoutY="309.0" />
+      <Label layoutX="27.0" layoutY="178.0" text="Adresa:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Label layoutX="25.0" layoutY="226.0" text="E-mail:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Label layoutX="25.0" layoutY="270.0" text="Lozinka:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Label layoutX="25.0" layoutY="313.0" text="Ponovi lozinku:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Label layoutX="326.0" layoutY="178.0" text="Grad:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="cityChoiceBox" layoutX="418.0" layoutY="174.0" prefWidth="150.0" />
+      <Label layoutX="314.0" layoutY="226.0" text="Telefonski broj:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Label>
+      <Text fx:id="infoLabel" layoutX="53.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_label" />
+   </children>
+</AnchorPane>

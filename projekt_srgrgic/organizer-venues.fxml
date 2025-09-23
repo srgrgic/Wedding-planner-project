@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1100.0" stylesheets="@../../../styles/screens.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.projekt_srgrgic.controllers.OrganizatorVenueController">
+    <fx:include source="menu-organizer.fxml" />
+   <Text layoutX="268.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Moji prostori za vjenčanja">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font></Text>
+   <TableView fx:id="venuesTableView" layoutX="238.0" layoutY="263.0" prefHeight="313.0" prefWidth="708.0">
+     <columns>
+         <TableColumn fx:id="nameColumn" prefWidth="107.19999694824219" text="Ime" />
+         <TableColumn fx:id="organizerColumn" prefWidth="119.20001220703125" text="Organizator" />
+         <TableColumn fx:id="locationColumn" prefWidth="139.20001220703125" text="Lokacija" />
+         <TableColumn fx:id="typeColumn" prefWidth="132.79998779296875" text="Vrsta prostora" />
+         <TableColumn fx:id="pricePerSeatColumn" prefWidth="114.4000244140625" text="Cijena po osobi" />
+         <TableColumn fx:id="capacityColumn" prefWidth="104.0" text="Kapacitet" />
+     </columns>
+   </TableView>
+   <Button fx:id="detailsButton" layoutX="364.0" layoutY="596.0" mnemonicParsing="false" onAction="#showVenue" prefHeight="26.0" prefWidth="78.0" styleClass="search_btn" text="Detaljno" />
+   <Button fx:id="deleteButton" layoutX="464.0" layoutY="596.0" mnemonicParsing="false" onAction="#deletesVenue" styleClass="search_btn" text="Izbriši prostor" />
+   <Label layoutX="238.0" layoutY="86.0" text="Ime:" />
+   <TextField fx:id="venueNameField" layoutX="272.0" layoutY="86.0" />
+   <Button layoutX="238.0" layoutY="596.0" mnemonicParsing="false" onAction="#switchToChanges" prefHeight="32.0" prefWidth="100.0" styleClass="search_btn" text="Promjene" />
+   <Button layoutX="692.0" layoutY="212.0" mnemonicParsing="false" onAction="#searchVenues" prefHeight="32.0" prefWidth="100.0" styleClass="search_btn" text="Pretraži" />
+   <Label fx:id="mostFavoritedVenueLabel" layoutX="266.0" layoutY="514.0" prefHeight="18.0" prefWidth="461.0" />
+   <Button fx:id="filterByPriceButton" layoutX="792.0" layoutY="88.0" mnemonicParsing="false" onAction="#filterByPrice" prefHeight="32.0" prefWidth="134.0" styleClass="search_btn" text="Sortiraj po cijeni" />
+   <ChoiceBox fx:id="venueTypeChoiceBox" layoutX="238.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="126.0" />
+   <DatePicker fx:id="dateDatePicker" layoutX="393.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" />
+   <ChoiceBox fx:id="cityChoiceBox" layoutX="561.0" layoutY="164.0" prefHeight="26.0" prefWidth="137.0" />
+   <TextField fx:id="guestsTextField" layoutX="718.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="124.0" />
+   <Button fx:id="clearFiltersButton" layoutX="819.0" layoutY="212.0" mnemonicParsing="false" onAction="#clearFilters" styleClass="search_btn" text="Ukloni filtere" />
+   <Label layoutX="238.0" layoutY="142.0" minHeight="-Infinity" minWidth="-Infinity" text="Tip prostora:" />
+   <Label layoutX="393.0" layoutY="142.0" text="Datum:" />
+   <Label layoutX="566.0" layoutY="142.0" text="Grad:" />
+   <Label layoutX="718.0" layoutY="142.0" text="Broj gostiju:" />
+
+</AnchorPane>

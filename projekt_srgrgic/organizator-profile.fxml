@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="532.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.projekt_srgrgic.controllers.OrganizatorProfileController">
+    <fx:include source="menu-organizer.fxml" />
+   <Text layoutX="277.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Moj Profil" />
+   <ListView fx:id="organizerListView" layoutX="261.0" layoutY="85.0" prefHeight="359.0" prefWidth="334.0" />
+
+</AnchorPane>

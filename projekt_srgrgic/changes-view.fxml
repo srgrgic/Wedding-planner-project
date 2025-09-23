@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="1097.0"  stylesheets="@../../../styles/screens.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.projekt_srgrgic.controllers.ChangesViewController">
+   <children>
+      <fx:include source="menu-organizer.fxml" />
+      <Text layoutX="227.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pregled promjena">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="236.0" layoutY="644.0" mnemonicParsing="false" onAction="#switchToOrganizerVenues" styleClass="create_btn"  text="Povratak " />
+      <TableView fx:id="changesTableView" layoutX="236.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="509.0" prefWidth="807.0" AnchorPane.bottomAnchor="141.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="101.0">
+         <columns>
+            <TableColumn fx:id="roleColumn" prefWidth="112.79998779296875" text="Rola" />
+            <TableColumn fx:id="nameColumn" prefWidth="189.59994506835938" text="Ime i Prezime" />
+            <TableColumn fx:id="actionColumn" prefWidth="160.00006103515625" text="Akcija" />
+            <TableColumn fx:id="venueColumn" prefWidth="164.79998779296875" text="Prostor" />
+            <TableColumn fx:id="dateTimeColumn" prefWidth="207.9998779296875" text="Datum i Vrijeme" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
